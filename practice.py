@@ -1,13 +1,19 @@
-# 백준 8958_OX퀴즈
-import sys
+### 백준 4673 "셀프 넘버"
 
-x = int(input()) # 테스트 케이스 개수
-y = []
-for i in range(x):
-    y.append(input().splitlines()) # 테스트 케이스
-#print(y) # input까지 성공
-# print("".join(y[0]))
-a = "".join(y[0]) # join함수 : list to str
-print(a)
-# for i in y:
-    
+"""
+양의 정수 n에 대해서 d(n)을 n과 n의 각 자리 수를 더하는 함수
+ex) d(75)= 75 + 7 + 5 = 87
+75는 87의 생성자이다.
+생성자는 2개 이상이 될 수 있다.
+여기서 생성자가 없는 숫자를 셀프 넘버라고한다
+100보다 작은 셀프 넘버는 총 13개(1, 3, 5, 7, 9, 20, 31, 42, 53, 64, 75, 86, 97)
+
+[10000보다 작거나 같은 셀프 넘버를 한 줄에 하나씩 출력]
+"""
+
+def d(n):
+    while True:
+        fn = n//10   # n의 첫째 자리 수
+        sn = n%10   # n의 둘째 자리 수
+        nn = n + fn + sn
+        if 
